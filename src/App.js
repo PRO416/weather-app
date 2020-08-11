@@ -17,10 +17,13 @@ function App() {
         .then(res => res.json())
         .then(data => {
           setCurrentWeather(data);
-          console.log(data)
         })
     }
     fetchData();
+    // async function getIcon(){
+    //   await fetch(`http://openweathermap.org/img/w/${iconCode}.png`)
+    //     .then
+    // }
   }, [city])
 
   function handleCityChange(update) {
