@@ -1,4 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 * {
+  font-family: 'Varela Round', sans-serif;
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
@@ -31,11 +33,129 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 9vh 5vh;
+}
+
+.App h3 {
+  font-size: 5rem;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .search-bar {
-  height: 5vh;
+  height: 7vh;
   width: 80%;
-  background: #1b455e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.search-bar input {
+  border: none;
+  height: inherit;
+  font-size: 2rem;
+}
+
+.search-bar input:focus {
+  outline: none;
+}
+
+.search-bar input:first-child {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border-top-left-radius: 5rem;
+  border-bottom-left-radius: 5rem;
+  padding-left: 5%;
+  color: #1485a1;
+}
+
+.search-bar input:last-child {
+  width: 20%;
+  border-top-right-radius: 5rem;
+  border-bottom-right-radius: 5rem;
+  background: #c8cbcc;
+  -webkit-transition: 0.2s background ease;
+  transition: 0.2s background ease;
+  color: #424647;
+  cursor: pointer;
+}
+
+.search-bar input:last-child:hover {
+  background: #989b9b;
+}
+
+.weather-card {
+  background: rgba(0, 0, 0, 0.301);
+  border-radius: 0.5rem;
+  width: 60vw;
+  height: 55vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3%;
+  font-size: 1.8rem;
+  overflow: hidden;
+  color: #d1d4d4;
+  font-size: 2.5rem;
+}
+
+.weather-card .description, .weather-card .temp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.weather-card .description {
+  height: 40vh;
+  padding: 2rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+
+.weather-card .description div:first-child {
+  font-size: 2.7rem;
+}
+
+.weather-card .description img {
+  height: 20vh;
+}
+
+.weather-card .temp {
+  height: 15vh;
+  width: 60vw;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2rem;
+}
+
+.weather-card .temp span {
+  font-size: 2rem;
+}
+
+.weather-card .temp span::after {
+  content: "\00b0 c";
+}
+
+.weather-card .temp span:nth-child(2) {
+  font-size: 5rem;
 }
 /*# sourceMappingURL=style.css.map */

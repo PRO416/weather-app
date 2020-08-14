@@ -20,10 +20,6 @@ function App() {
         })
     }
     fetchData();
-    // async function getIcon(){
-    //   await fetch(`http://openweathermap.org/img/w/${iconCode}.png`)
-    //     .then
-    // }
   }, [city])
 
   function handleCityChange(update) {
@@ -37,8 +33,8 @@ function App() {
   return (
     <div className="App">
       <h3>Weather Update</h3>
-      <Search handleCityChange={handleCityChange} commitCityChange={commitCityChange}/>
-      <WeatherCard currentWeather={currentWeather}/>
+      <Search handleCityChange={handleCityChange} commitCityChange={commitCityChange} />
+      <WeatherCard currentWeather={currentWeather} />
     </div>
   );
 }

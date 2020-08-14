@@ -1,5 +1,37 @@
 .search-bar{
-  height: 5vh;
+  height: 7vh;
   width: 80%;
-  background: rgb(27, 69, 94);
+  display: flex;
+
+  input{
+    border: none;
+    height: inherit;
+    font-size: 2rem;
+
+    &:focus{
+      outline: none;
+    }
+  }
+
+  input:first-child{
+    flex: 1;
+    border-top-left-radius: 5rem;
+    border-bottom-left-radius: 5rem;
+    padding-left: 5%;
+    color: rgb(20, 133, 161);
+  }
+
+  input:last-child{
+    width: 20%;
+    border-top-right-radius: 5rem;
+    border-bottom-right-radius: 5rem;
+    background: rgb(200, 203, 204);
+    transition: 0.2s background ease;
+    color: rgb(66, 70, 71);
+    cursor: pointer;
+
+    &:hover{
+      background: rgb(152, 155, 155);
+    }
+  }
 }

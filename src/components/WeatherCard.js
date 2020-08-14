@@ -4,17 +4,24 @@ const WeatherCard = (props) => {
   return (
     <div className="weather-card">
       <div>
+        <>
         {
-          <span>{props.currentWeather.main ? props.currentWeather.main.temp : ''}</span>,
           props.currentWeather.weather ? props.currentWeather.weather.map(item => {
             return(
-              <>
-                <div key={item.description}>{item.description}</div>
-                <div key={item.main}>{item.main}</div>
-              </>
+              <div key={item} className="description">
+                <div>{item.main}</div>
+                <img src={`http://openweathermap.org/img/w/${item.icon}.png`} alt="icon"/>
+                <div>{item.description}</div>
+              </div>
             );
           }) : ''
         }
+        </>
+        <div className="temp">
+          <span>min: {props.currentWeather.main ? (parseInt(props.currentWeather.main.temp_min - 273.15)) : ''}</span>
+          <span>{props.currentWeather.main ? (parseInt(props.currentWeather.main.temp - 273.15)) : ''}</span>
+          <span>max: {props.currentWeather.main ? (parseInt(props.currentWeather.main.temp_max - 273.15)) : ''}</span>
+        </div>
       </div>
     </div>
   );

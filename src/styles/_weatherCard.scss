@@ -1,0 +1,54 @@
+.weather-card {
+  background: rgba(0, 0, 0, 0.301);
+  border-radius: 0.5rem;
+  width: 60vw;
+  height: 55vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 3%;
+  font-size: 1.8rem;
+  overflow: hidden;
+  color: rgb(209, 212, 212);
+  font-size: 2.5rem;
+
+  .description, .temp {
+    display: flex;
+    align-items: center;
+  }
+
+  .description {
+    height: 40vh;
+    padding: 2rem;
+    justify-content: space-between;
+    flex-flow: column nowrap;
+
+    div:first-child {
+      font-size: 2.7rem;
+    }
+
+    img {
+      height: 20vh;
+    }
+  }
+
+  .temp{
+    height: 15vh;
+    width: 60vw;
+    justify-content: space-between;
+    padding: 2rem;
+
+    span {
+      font-size: 2rem;
+
+      &::after{
+        content: "\00b0 c";
+      }
+    }
+
+    span:nth-child(2){
+      font-size: 5rem;
+    }
+  }
+}
