@@ -107,6 +107,8 @@ body {
   overflow: hidden;
   color: #d1d4d4;
   font-size: 2.5rem;
+  -webkit-box-shadow: 0rem 0rem 1rem 1rem rgba(20, 20, 20, 0.493);
+          box-shadow: 0rem 0rem 1rem 1rem rgba(20, 20, 20, 0.493);
 }
 
 .weather-card .description, .weather-card .temp {
